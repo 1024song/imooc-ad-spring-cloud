@@ -75,7 +75,7 @@ public class UnitKeywordIndex implements IndexAware<String, Set<Long>> {
             keywordSet.remove(key);
         }
 
-        log.info("UnitKeywordIndex after delete:{}",unitKeywordMap);
+        log.error("UnitKeywordIndex after delete:{}",unitKeywordMap);
     }
 
     public boolean match(Long unitId, List<String> keywords){

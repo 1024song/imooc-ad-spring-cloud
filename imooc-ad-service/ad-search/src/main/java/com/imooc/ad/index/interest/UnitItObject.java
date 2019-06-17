@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class UnitObject {
+public class UnitItObject {
 
     private Long unitId;
     private String itTag;
