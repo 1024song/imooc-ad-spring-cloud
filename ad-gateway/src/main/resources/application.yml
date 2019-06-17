@@ -1,0 +1,29 @@
+server:
+  port: 9000
+spring:
+  application:
+    name: ad-gateway
+eureka:
+  client:
+    service-url:
+      defaultZone: http://server1:8001/eureka/
+
+
+#   转发
+zuul:
+  # 经过网关 都会有一个前缀
+  prefix: /imooc
+  # 路由信息
+  routes:
+    # 定义一个微服务
+    sponsor:
+      # 前缀 通过前缀转发
+      path: /ad-sponsor/**
+      serviceId: eureka-client-ad-sponsor
+      # 是否跳过前缀 访问
+      strip-prefix: false
+      # 127.0.0.1:9000/imooc/ad-sponsor/.....
+#    search:
+#      path: /ad-search/**
+#      serviceId: eureka-client-ad-search
+#      strip-prefix: false
