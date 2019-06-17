@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class CreativeUnitObject {
 
-    private Long adId;
+    private Long adId;//创意Id
     private Long unitId;
 
     // adId-unitId

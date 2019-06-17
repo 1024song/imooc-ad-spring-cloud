@@ -24,9 +24,9 @@ public class CreativeUnitIndex implements
 
     // <adId-unitId, CreativeUnitObject>
     private static Map<String, CreativeUnitObject> objectMap;
-    // <adId, unitId Set>
+    // <adId, unitId Set> 一对多的关系
     private static Map<Long, Set<Long>> creativeUnitMap;
-    // <unitId, adId set>
+    // <unitId, adId set> 一对多的关系
     private static Map<Long, Set<Long>> unitCreativeMap;
 
     static {
