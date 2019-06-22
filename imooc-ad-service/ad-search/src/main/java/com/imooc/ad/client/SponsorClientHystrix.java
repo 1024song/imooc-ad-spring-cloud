@@ -3,12 +3,13 @@ package com.imooc.ad.client;
 import com.imooc.ad.client.vo.AdPlan;
 import com.imooc.ad.client.vo.AdPlanGetRequest;
 import com.imooc.ad.vo.CommonResponse;
+import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
 
 /**
- * Created by Qinyi.
+ * Created by Song.
  */
 @Component
 public class SponsorClientHystrix implements SponsorClient {

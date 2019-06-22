@@ -1,19 +1,17 @@
-package com.imooc.ad.index.creativeunit;
+package com.imooc.ad.dump.table;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * Created by Song.
+ * Created by Qinyi.
  */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class CreativeUnitObject {
+public class AdUnitItTable {
 
-    private Long adId;//创意Id
     private Long unitId;
-
-    // adId-unitId   key
+    private String itTag;
 }

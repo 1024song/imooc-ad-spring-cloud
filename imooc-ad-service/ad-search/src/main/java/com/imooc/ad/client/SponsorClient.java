@@ -14,10 +14,11 @@ import java.util.List;
 
 
 @FeignClient(value = "eureka-client-ad-sponsor",//需要调用微服务的名称
-                fallback = SponsorClientHystrix.class)
+                fallback = SponsorClientHystrix.class)//服务降级的时候执行SponsorClientHystrix.
 @Component
 public interface SponsorClient {
 
+    //指定需要调用微服务的哪个接口
     @RequestMapping(value = "/ad-sponsor/get/adPlan",
             method = RequestMethod.POST)
     CommonResponse<List<AdPlan>> getAdPlans(
