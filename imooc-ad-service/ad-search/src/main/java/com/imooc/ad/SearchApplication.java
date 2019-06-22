@@ -28,7 +28,7 @@ public class SearchApplication {
     }
 
     @Bean
-    @LoadBalanced
+    @LoadBalanced //实现负载均衡的能力
     RestTemplate restTemplate(){
 
         return new RestTemplate();

@@ -39,7 +39,8 @@ public class SearchController {
             @RequestBody AdPlanGetRequest request){
         log.info("ad-search: getAdPlansByRibbon -> {}",
                 JSON.toJSONString(request));
-        return restTemplate.postForEntity("http://eureka-client-ad-sponsor/ad-sponsor/get/adplan",
+        return restTemplate.postForEntity(
+                "http://eureka-client-ad-sponsor/ad-sponsor/get/adplan",
                 request, CommonResponse.class).getBody();
     }
 
